@@ -10,7 +10,7 @@ project(PandoraPFA)
 
 set(${PROJECT_NAME}_VERSION_MAJOR 03)
 set(${PROJECT_NAME}_VERSION_MINOR 15)
-set(${PROJECT_NAME}_VERSION_PATCH 00)
+set(${PROJECT_NAME}_VERSION_PATCH 01)
 set(${PROJECT_NAME}_VERSION "${PandoraSDK_VERSION_MAJOR}.${PandoraSDK_VERSION_MINOR}.${PandoraSDK_VERSION_PATCH}")
 
 #-------------------------------------------------------------------------------------------------------------------------------------------
@@ -164,6 +164,8 @@ if(EXAMPLE_PANDORA_CONTENT)
         SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/${EXAMPLE_CONTENT_LIBRARY_NAME}-${ExampleContent_version}
     )
 endif()
+
+install(DIRECTORY "cmakemodules/" DESTINATION "cmakemodules")
 
 #-------------------------------------------------------------------------------------------------------------------------------------------
 # display some variables and write them to cache
